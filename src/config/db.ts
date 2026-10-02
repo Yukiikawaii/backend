@@ -32,3 +32,4 @@ pool.query("SHOW CREATE TABLE orders")
   .catch((error) => {
     console.error("ORDERS TABLE CHECK ERROR:", error);
   });
+  
