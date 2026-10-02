@@ -6,6 +6,11 @@ export const pool = mysql.createPool({
   user: process.env.DB_USER ?? "root",
   password: process.env.DB_PASSWORD ?? "",
   database: process.env.DB_NAME ?? "aqua_grace",
+
+  ssl: {
+    minVersion: "TLSv1.2",
+  },
+
   waitForConnections: true,
   connectionLimit: 10,
 });
